@@ -27,7 +27,7 @@ library(xlsx)
 # drop_download("data_InternalFAO_jan.RData" , path = "shiny", overwrite = TRUE)
 #load("Data_In.RData")
 
-server <- shinyServer(function(input, output, session) {
+shinyServer(function(input, output, session) {
   ##### Aggregation Options ####
   observe({
     if(input$aggregation == "WORLD") {
