@@ -29,7 +29,7 @@ library(rdrop2)
 load("Data_In.RData")
 # Define UI for application that draws a histogram
 
-shinyUI(fluidPage(theme = shinytheme("lumen"),
+ui <- shinyUI(fluidPage(theme = shinytheme("lumen"),
                   sidebarLayout(
                     sidebarPanel(
                       #Input()
