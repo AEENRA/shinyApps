@@ -93,6 +93,7 @@ shinyUI(fluidPage(theme = shinytheme("lumen"),
                         checkboxInput("checkbox", label = "Only Top 10 SDG Baskets", value = FALSE),
                         checkboxInput("checkboxofficial", label = "Official Data Only", value = FALSE),
                         checkboxInput("checkboxflags", label = "Show Flags", value = FALSE),
+                        checkboxInput("checkboxstage", label = "By Stage of Value Chain", value = FALSE),
                         #checkboxInput("checkbox_input", label = "Add Input Data", value = FALSE),
                         #checkboxInput("checkbox_Markovs", label = "Add Input Data- Aggregated", value = FALSE),
                         selectInput(

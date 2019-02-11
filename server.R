@@ -25,7 +25,7 @@ library(xlsx)
 # # Then pass the token to each drop_ function
 # drop_acc(dtoken = token)
 # drop_download("data_InternalFAO_jan.RData" , path = "shiny", overwrite = TRUE)
-#load("Data_In.RData")
+load("Data_In.RData")
 
 shinyServer(function(input, output, session) {
   ##### Aggregation Options ####
@@ -616,6 +616,7 @@ shinyServer(function(input, output, session) {
         dplyr:: summarise(Number_Obs = n()) %>%
         arrange(- gfli_basket)
     }
+    
     countT <- as.data.table(hm)
     countT <- merge(countT,FAOCrops[,c("measureditemcpc", "crop"),with=F], by= c("measureditemcpc"), all.x= T)
     countT
